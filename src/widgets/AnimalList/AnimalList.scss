@@ -1,0 +1,43 @@
+.AnimalListDiv {
+  background: linear-gradient(#9198e5, #e66465);
+  min-width: 25%;
+  max-width: 30%;
+  border: antiquewhite 1px solid;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    width: 100%;
+  }
+}
+
+.AnimalList {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+
+  li {
+    width: fit-content;
+  }
+}
+
+.AnimalInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.AnimalInput input,
+.AnimalInput button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
