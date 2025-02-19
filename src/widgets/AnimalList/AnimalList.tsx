@@ -17,6 +17,10 @@ function AnimalList() {
     setAnimals([]);
   };
 
+  const reset = () => {
+    setAnimals(['Lion', 'Tiger', 'Bear', 'Horse']);
+  };
+
   return (
     <div className='AnimalListDiv ListDiv'>
       <h2>Animals</h2>
@@ -32,6 +36,7 @@ function AnimalList() {
         />
         <button onClick={addAnimal}>Add</button>
         <button onClick={deleteAll}>Delete all</button>
+        <button onClick={reset}>Reset</button>
       </section>
 
       <ul className='AnimalList List'>
