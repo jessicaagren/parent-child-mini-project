@@ -8,12 +8,10 @@ function BookCard() {
           src='https://s1.adlibris.com/images/69679158/vaninnorna-pa-nordiska-kompaniet.jpg'
           alt=''
         />
-        <p>
-          <span>Titel:</span> Väninnorna på Nordiska Kompaniet
-        </p>
-        <p>
-          <span>Författare:</span> Ruth Kvarnström-Jones
-        </p>
+        <h2>Titel:</h2>
+        <p>Väninnorna på Nordiska Kompaniet</p>
+        <h2>Författare:</h2>
+        <p>Ruth Kvarnström-Jones</p>
       </div>
     </>
   );
