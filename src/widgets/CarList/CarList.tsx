@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './CarList.scss';
+import CarItem from './CarItem/CarItem';
 
 const carsList = [
   'Volvo',
@@ -18,12 +19,15 @@ function CarList() {
   };
 
   return (
-    <div className='CarListDiv'>
-      <ul className='CarList'>
+    <div className='CarListDiv ListDiv'>
+      <h2>Cars</h2>
+      <ul className='CarList List'>
         {cars.map((car, index) => (
-          <li key={index}>
-            {car} <button onClick={() => deleteCar(index)}>Delete</button>
-          </li>
+          <CarItem
+            key={index}
+            car={car}
+            handleDeleteClick={() => deleteCar(index)}
+          />
         ))}
       </ul>
     </div>
