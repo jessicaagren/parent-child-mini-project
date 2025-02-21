@@ -17,3 +17,21 @@
     width: 100%;
   }
 }
+
+.BookCard {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  img {
+    max-height: 150px;
+    height: auto;
+    max-width: 100px;
+    width: auto;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}

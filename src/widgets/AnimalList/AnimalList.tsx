@@ -18,7 +18,7 @@ function AnimalList() {
   };
 
   const reset = () => {
-    setAnimals(['Lion', 'Tiger', 'Bear', 'Horse']);
+    setAnimals([...animalsList]);
   };
 
   return (
