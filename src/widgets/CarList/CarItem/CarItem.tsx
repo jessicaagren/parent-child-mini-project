@@ -1,14 +1,27 @@
 import './CarItem.scss';
+// import { carsList } from '../CarList.tsx';
 
 type CarItemProps = {
-  car: string;
+  car: Car;
   handleDeleteClick: () => void;
+  isActive: boolean;
+  setIsActive: (state: boolean) => void;
 };
 
-function CarItem({ car, handleDeleteClick }: CarItemProps) {
+export type Car = {
+  name: string,
+  description: string
+}
+
+function CarItem({ car, isActive, setIsActive, handleDeleteClick }: CarItemProps) {
   return (
     <li className='CarItem'>
-      {car} <button onClick={handleDeleteClick}>Delete</button>
+      {car.name} 
+      <button onClick={() => setIsActive(!isActive)}>
+        {isActive ? "Hide" : "Show"}
+      </button>
+      <button onClick={handleDeleteClick}>Delete</button>
+      {isActive && <span>{car.description}</span>}
     </li>
   );
 }
