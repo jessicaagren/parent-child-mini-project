@@ -1,17 +1,16 @@
 .BookCard {
-  background-color: antiquewhite;
-  padding: 1rem;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+
   img {
     max-height: 250px;
     height: auto;
     max-width: 150px;
     width: auto;
   }
+
   span {
     font-weight: bold;
   }
