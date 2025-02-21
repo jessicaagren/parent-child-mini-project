@@ -1,18 +1,29 @@
 import { useState } from 'react';
 import './CarList.scss';
-import CarItem from './CarItem/CarItem';
+import CarItem, { Car } from './CarItem/CarItem';
 
-const carsList = [
-  'Volvo',
-  'Saab',
-  'Honda',
-  'Ferrari',
-  'Porsche',
-  'Lamborghini',
+// const carsList = [
+//   'Volvo',
+//   'Saab',
+//   'Honda',
+//   'Ferrari',
+//   'Porsche',
+//   'Lamborghini',
+// ];
+
+export const carsList = [
+  { name: "Volvo", description: "A reliable Swedish car brand." },
+  { name: "Saab", description: "Another classic Swedish car manufacturer." },
+  { name: "Honda", description: "A Japanese brand known for reliability." },
+  { name: "Ferrari", description: "A luxury Italian sports car brand." },
+  { name: "Porsche", description: "A German brand famous for performance." },
+  { name: "Lamborghini", description: "An Italian brand known for supercars." },
 ];
 
+
 function CarList() {
-  const [cars, setCars] = useState<string[]>(carsList);
+  const [cars, setCars] = useState<Car[]>(carsList);
+  const [activeStates, setActiveStates] = useState<{ [key: string]: boolean }>({});
 
   const deleteCar = (index: number) => {
     setCars(cars.filter((_, i) => i !== index));
@@ -29,8 +40,10 @@ function CarList() {
         <ul className='CarList List'>
           {cars.map((car, index) => (
             <CarItem
-              key={index}
+              key={car.name}
               car={car}
+              isActive={activeStates[car.name] || false}
+              setIsActive={(state) => setActiveStates({ ...activeStates, [car.name]: state })}
               handleDeleteClick={() => deleteCar(index)}
             />
           ))}
