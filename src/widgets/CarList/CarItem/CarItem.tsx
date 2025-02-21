@@ -9,18 +9,25 @@ type CarItemProps = {
 };
 
 export type Car = {
-  name: string,
-  description: string
-}
+  name: string;
+  description: string;
+};
 
-function CarItem({ car, isActive, setIsActive, handleDeleteClick }: CarItemProps) {
+function CarItem({
+  car,
+  isActive,
+  setIsActive,
+  handleDeleteClick,
+}: CarItemProps) {
   return (
     <li className='CarItem'>
-      {car.name} 
-      <button onClick={() => setIsActive(!isActive)}>
-        {isActive ? "Hide" : "Show"}
-      </button>
-      <button onClick={handleDeleteClick}>Delete</button>
+      {car.name}
+      <div className='ButtonDiv'>
+        <button onClick={() => setIsActive(!isActive)}>
+          {isActive ? 'Hide' : 'Show'}
+        </button>
+        <button onClick={handleDeleteClick}>Delete</button>
+      </div>
       {isActive && <span>{car.description}</span>}
     </li>
   );
