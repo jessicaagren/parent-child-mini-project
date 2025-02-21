@@ -18,19 +18,28 @@ function CarList() {
     setCars(cars.filter((_, i) => i !== index));
   };
 
+  const reset = () => {
+    setCars([...carsList]);
+  };
+
   return (
-    <div className='CarListDiv ListDiv'>
-      <h2>Cars</h2>
-      <ul className='CarList List'>
-        {cars.map((car, index) => (
-          <CarItem
-            key={index}
-            car={car}
-            handleDeleteClick={() => deleteCar(index)}
-          />
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className='CarListDiv ListDiv'>
+        <h2>Cars</h2>
+        <ul className='CarList List'>
+          {cars.map((car, index) => (
+            <CarItem
+              key={index}
+              car={car}
+              handleDeleteClick={() => deleteCar(index)}
+            />
+          ))}
+        </ul>
+        <button onClick={reset} className='ResetButton'>
+          Reset
+        </button>
+      </div>
+    </>
   );
 }
 

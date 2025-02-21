@@ -1,3 +1,5 @@
+import './CarItem.scss';
+
 type CarItemProps = {
   car: string;
   handleDeleteClick: () => void;
@@ -5,7 +7,7 @@ type CarItemProps = {
 
 function CarItem({ car, handleDeleteClick }: CarItemProps) {
   return (
-    <li>
+    <li className='CarItem'>
       {car} <button onClick={handleDeleteClick}>Delete</button>
     </li>
   );
