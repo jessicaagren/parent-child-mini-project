@@ -1,6 +1,6 @@
 .BookBox {
   background: linear-gradient(#9198e5, #e66465);
-  min-width: 25%;
+  min-width: 20%;
   max-width: 30%;
   border: antiquewhite 1px solid;
   padding: 10px;
@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: fit-content;
 
   ul {
     padding: 0;
@@ -23,6 +24,8 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  border: antiquewhite 1px solid;
+  margin: 10px;
 
   img {
     max-height: 150px;
