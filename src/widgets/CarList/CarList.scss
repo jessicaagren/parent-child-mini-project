@@ -1,13 +1,14 @@
 .CarListDiv {
   background: linear-gradient(#9198e5, #e66465);
-  min-width: 25%;
-  //   max-width: 30%;
+  min-width: 20%;
+  max-width: 30%;
   border: antiquewhite 1px solid;
   padding: 10px;
   margin: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: fit-content;
 
   h2 {
     width: 100%;
@@ -36,7 +37,7 @@
     width: 100%;
     flex-wrap: wrap;
 
-    span {
+    p {
       width: 100%;
     }
   }

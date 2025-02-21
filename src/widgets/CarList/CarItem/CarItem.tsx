@@ -28,7 +28,7 @@ function CarItem({
         </button>
         <button onClick={handleDeleteClick}>Delete</button>
       </div>
-      {isActive && <span>{car.description}</span>}
+      {isActive && <p>{car.description}</p>}
     </li>
   );
 }
