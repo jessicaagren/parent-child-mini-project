@@ -51,6 +51,7 @@ function BookBox() {
           name='title'
           value={newBook.title}
           onChange={handleInputChange}
+          className='BookInput'
           required
         />
         <label htmlFor='image'>Image URL:</label>
@@ -60,6 +61,7 @@ function BookBox() {
           name='image'
           value={newBook.image}
           onChange={handleInputChange}
+          className='BookInput'
         />
         <label htmlFor='author'>Author:</label>
         <input
@@ -68,6 +70,7 @@ function BookBox() {
           name='author'
           value={newBook.author}
           onChange={handleInputChange}
+          className='BookInput'
         />
         <button type='submit'>Add Book</button>
         <button type='button' onClick={deleteAll}>
