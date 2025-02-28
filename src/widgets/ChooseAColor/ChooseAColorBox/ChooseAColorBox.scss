@@ -1,0 +1,63 @@
+.ChooseAColorBox {
+  background: linear-gradient(#9198e5, #e66465);
+  min-width: 20%;
+  max-width: 30%;
+  border: antiquewhite 1px solid;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+
+  ul {
+    padding: 0;
+  }
+
+  h2 {
+    width: 100%;
+  }
+}
+.ChooseAColorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.AddColorBoxButton {
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.ColorBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.ColorBoxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.ColorPicker {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+}
+
+.ChooseAColorItem {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  transition: background-color 0.3s ease;
+}
