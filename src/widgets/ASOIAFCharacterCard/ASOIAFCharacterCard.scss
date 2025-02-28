@@ -1,0 +1,27 @@
+.ASOIAFCharacterCard {
+  background: linear-gradient(#9198e5, #e66465);
+  min-width: 20%;
+  max-width: 30%;
+  border: antiquewhite 1px solid;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+
+  ul {
+    padding: 0;
+  }
+
+  h2 {
+    width: 100%;
+  }
+
+  .ASOIAFButton {
+    width: 45%;
+    padding: 10px;
+    margin: 10px;
+  }
+}
