@@ -19,26 +19,6 @@
   }
 }
 
-.BookCard {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  border: antiquewhite 1px solid;
-  margin: 10px;
-
-  img {
-    max-height: 150px;
-    height: auto;
-    max-width: 100px;
-    width: auto;
-  }
-
-  span {
-    font-weight: bold;
-  }
-}
-
 // .BookInput {
 //   display: flex;
 //   flex-direction: column;

@@ -1,17 +1,16 @@
 import './BookCard.scss';
 
-function BookCard() {
+type BookFormProps = {
+  newBook: { title: string; image: string; author: string };
+};
+
+function BookCard({ newBook }: BookFormProps) {
   return (
     <>
-      <div className='BookCard'>
-        <h2>Väninnorna på Nordiska Kompaniet</h2>
-        <img
-          src='https://s1.adlibris.com/images/69679158/vaninnorna-pa-nordiska-kompaniet.jpg'
-          alt=''
-        />
-        <h3>Författare:</h3>
-        <p>Ruth Kvarnström-Jones</p>
-      </div>
+      <h2>{newBook.title}</h2>
+      <img src={newBook.image} alt={newBook.title} />
+      <h3>Author:</h3>
+      <p>{newBook.author}</p>
     </>
   );
 }
