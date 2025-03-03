@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './ASOIAFCharacterCard.scss';
+import AsoiafCharacterType from '../../types/ASOIAFCharacterType/ASOIAFCharacterType';
 
 export default function ASOIAFCharacterCard() {
   const [random, setRandom] = useState(
@@ -18,7 +19,7 @@ export default function ASOIAFCharacterCard() {
     const fetchData = async () => {
       setLoading(true);
       const result = await fetch(url);
-      const data = await result.json();
+      const data = (await result.json()) as AsoiafCharacterType;
       if (!ignore) {
         setName(data.name || 'Unknown');
         setGender(data.gender || 'Unknown');
