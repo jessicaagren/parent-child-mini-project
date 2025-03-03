@@ -1,6 +1,9 @@
 import './App.scss';
 import AnimalList from './widgets/AnimalList/AnimalList';
-import ASOIAFCharacterCard from './widgets/ASOIAFCharacterCard/ASOIAFCharacterCard';
+import {
+  ASOIAFCharacterCard,
+  DisplayASOIAFCharacterCard,
+} from './widgets/ASOIAFCharacterCard/ASOIAFCharacterCard';
 // import BookBox2 from './widgets/BookBox copy/BookBox';
 import BookBox from './widgets/BookBox/BookBox';
 import CarList from './widgets/CarList/CarList';
@@ -16,6 +19,7 @@ function App() {
       {/* <BookBox2/> */}
       <ChooseAColorBox />
       <ASOIAFCharacterCard />
+      <DisplayASOIAFCharacterCard />
     </>
   );
 }

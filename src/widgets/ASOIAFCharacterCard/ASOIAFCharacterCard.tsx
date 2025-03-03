@@ -1,8 +1,48 @@
 import { useEffect, useState } from 'react';
 import './ASOIAFCharacterCard.scss';
 import AsoiafCharacterType from '../../types/ASOIAFCharacterType/ASOIAFCharacterType';
+import useFetch from '../../hooks/useFetch';
+import Button from '../../components/Button/Button';
 
-export default function ASOIAFCharacterCard() {
+// Component using the useFetch Hook
+export function DisplayASOIAFCharacterCard() {
+  const [random, setRandom] = useState(
+    () => Math.floor(Math.random() * 1000) + 1
+  );
+
+  const getNewCharacter = () => {
+    setRandom(Math.floor(Math.random() * 1000) + 1);
+  };
+
+  const { data, loading, error } = useFetch(
+    `https://www.anapioficeandfire.com/api/characters/${random}`
+  ); // Utilizing useFetch
+
+  //   if (loading) return <p>Loading...</p>;
+  //   if (error) return <p>Error: {error}</p>;
+
+  return (
+    <>
+      <div className='ASOIAFCharacterCard'>
+        <h2>ASOIAF API with useFetch</h2>
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : (
+          <>
+            <p>Name: {data?.name}</p>
+            <p>Gender: {data?.gender}</p>
+            <p>Culture: {data?.culture}</p>
+          </>
+        )}
+        <Button title='Randomise' clickFunction={getNewCharacter} />
+      </div>
+    </>
+  );
+}
+
+export function ASOIAFCharacterCard() {
   const [random, setRandom] = useState(
     () => Math.floor(Math.random() * 1000) + 1
   );
@@ -40,20 +80,20 @@ export default function ASOIAFCharacterCard() {
   };
 
   return (
-    <div className='ASOIAFCharacterCard'>
-      <h2>ASOIAF API</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          <p>Name: {name}</p>
-          <p>Gender: {gender}</p>
-          <p>Culture: {culture}</p>
-        </>
-      )}
-      <button className='ASOIAFButton' onClick={getNewCharacter}>
-        Randomise
-      </button>
-    </div>
+    <>
+      <div className='ASOIAFCharacterCard'>
+        <h2>ASOIAF API</h2>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            <p>Name: {name}</p>
+            <p>Gender: {gender}</p>
+            <p>Culture: {culture}</p>
+          </>
+        )}
+        <Button title='Randomise' clickFunction={getNewCharacter} />
+      </div>
+    </>
   );
 }
