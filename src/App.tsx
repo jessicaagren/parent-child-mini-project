@@ -8,6 +8,7 @@ import {
 import BookBox from './widgets/BookBox/BookBox';
 import CarList from './widgets/CarList/CarList';
 import ChooseAColorBox from './widgets/ChooseAColor/ChooseAColorBox/ChooseAColorBox';
+import { LastFMArtistCard } from './widgets/LastFMArtistCard/LastFMArtistCard';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <ChooseAColorBox />
       <ASOIAFCharacterCard />
       <DisplayASOIAFCharacterCard />
+      <LastFMArtistCard />
     </>
   );
 }

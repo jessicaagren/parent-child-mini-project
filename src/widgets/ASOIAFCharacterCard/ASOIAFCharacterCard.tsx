@@ -14,7 +14,7 @@ export function DisplayASOIAFCharacterCard() {
     setRandom(Math.floor(Math.random() * 1000) + 1);
   };
 
-  const { data, loading, error } = useFetch(
+  const { data, loading, error } = useFetch<AsoiafCharacterType>(
     `https://www.anapioficeandfire.com/api/characters/${random}`
   ); // Utilizing useFetch
 
