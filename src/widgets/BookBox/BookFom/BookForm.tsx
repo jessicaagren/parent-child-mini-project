@@ -49,10 +49,11 @@ function BookForm({
             onChange={handleChange}
             className='BookInput'
             placeholder='Author'
+            required
           />
         </label>
       </div>
-      <button type='submit'>Add Book</button>
+      <Button title='Add book' buttonType='submit' />
       <Button title='Delete all' clickFunction={deleteAll} />
     </form>
   );

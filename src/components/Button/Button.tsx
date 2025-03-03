@@ -2,17 +2,28 @@ import './Button.scss';
 
 type ButtonProps = {
   title: string;
+  buttonType?: 'button' | 'submit' | 'reset';
   className?: string;
-  clickFunction: () => void | null;
+  clickFunction?: () => void | null;
 };
 
-function Button({ title, className, clickFunction }: ButtonProps) {
+function Button({
+  title,
+  buttonType = 'button',
+  className,
+  clickFunction,
+}: ButtonProps) {
   const handleClick = () => {
-    clickFunction();
+    clickFunction ? clickFunction() : null;
   };
+
   return (
     <>
-      <button id='thisButton' className={className} onClick={handleClick}>
+      <button
+        id='thisButton'
+        type={buttonType}
+        className={className}
+        onClick={handleClick}>
         {title}
       </button>
     </>
