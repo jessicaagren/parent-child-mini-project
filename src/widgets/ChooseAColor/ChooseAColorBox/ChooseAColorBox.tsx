@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './ChooseAColorBox.scss';
+import Button from '../../../components/Button/Button';
 
 type ColorBox = {
   id: number;
@@ -25,9 +26,7 @@ function ChooseAColorBox() {
     <div className='ChooseAColorBox'>
       <h2>Add color</h2>
 
-      <button onClick={addColorBox} className='AddColorBoxButton'>
-        Add color box
-      </button>
+      <Button title='Add color box' clickFunction={addColorBox} />
       <div className='ColorBoxes'>
         {colorBoxes.map((box) => (
           <div key={box.id} className='ColorBoxContainer'>

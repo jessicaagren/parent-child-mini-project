@@ -1,3 +1,4 @@
+import Button from '../../../components/Button/Button';
 import './BookForm.scss';
 
 type BookFormProps = {
@@ -52,9 +53,7 @@ function BookForm({
         </label>
       </div>
       <button type='submit'>Add Book</button>
-      <button type='button' onClick={deleteAll}>
-        Delete all
-      </button>
+      <Button title='Delete all' clickFunction={deleteAll} />
     </form>
   );
 }

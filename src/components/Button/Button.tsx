@@ -3,7 +3,7 @@ import './Button.scss';
 type ButtonProps = {
   title: string;
   className?: string;
-  clickFunction: () => void;
+  clickFunction: () => void | null;
 };
 
 function Button({ title, className, clickFunction }: ButtonProps) {
