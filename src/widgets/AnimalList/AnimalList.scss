@@ -26,19 +26,7 @@
   li {
     width: fit-content;
   }
-}
-
-.AnimalInput {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
-
-.AnimalInput input,
-.AnimalInput button {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  box-sizing: border-box;
+  li:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+  }
 }

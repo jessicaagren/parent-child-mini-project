@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './AnimalList.scss';
 import AnimalItem from './AnimalItem/AnimalItem';
+import Button from '../../components/Button/Button';
+import InputField from '../../components/InputField/InputField';
 
 const animalsList = ['Lion', 'Tiger', 'Bear', 'Horse'];
 
@@ -25,18 +27,17 @@ function AnimalList() {
     <div className='AnimalListDiv ListDiv'>
       <h2>Animals</h2>
       <section className='AnimalInput'>
-        <input
-          autoFocus
-          type='text'
-          placeholder='Animal... (max 20 letters)'
-          maxLength={20}
+        <InputField
           value={inputAnimal}
           onChange={(e) => setInputAnimal(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && addAnimal()}
+          onEnterPress={addAnimal}
+          placeholder='Animal... (max 20 letters)'
+          maxLength={20}
+          autoFocus
         />
-        <button onClick={addAnimal}>Add</button>
-        <button onClick={deleteAll}>Delete all</button>
-        <button onClick={reset}>Reset</button>
+        <Button title='Add' clickFunction={addAnimal} />
+        <Button title='Delete all' clickFunction={deleteAll} />
+        <Button title='Reset' clickFunction={reset} />
       </section>
 
       <ul className='AnimalList List'>

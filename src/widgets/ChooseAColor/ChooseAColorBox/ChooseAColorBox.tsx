@@ -39,7 +39,7 @@ function ChooseAColorBox() {
             <div
               className='ChooseAColorItem'
               style={{ backgroundColor: box.color }}>
-              <p>Color: {box.color}</p>
+              <p>{box.color}</p>
             </div>
           </div>
         ))}

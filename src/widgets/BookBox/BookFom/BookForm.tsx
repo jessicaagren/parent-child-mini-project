@@ -1,4 +1,5 @@
 import Button from '../../../components/Button/Button';
+import InputField from '../../../components/InputField/InputField';
 import './BookForm.scss';
 
 type BookFormProps = {
@@ -17,41 +18,29 @@ function BookForm({
   return (
     <form className='BookForm' onSubmit={handleSubmit}>
       <div>
-        <label htmlFor='title'>
-          <input
-            type='text'
-            id='title'
-            name='title'
-            value={newBook.title}
-            onChange={handleChange}
-            className='BookInput'
-            placeholder='Title'
-            required
-          />
-        </label>
-        <label htmlFor='image'>
-          <input
-            type='text'
-            id='image'
-            name='image'
-            value={newBook.image}
-            onChange={handleChange}
-            className='BookInput'
-            placeholder='Image URL'
-          />
-        </label>
-        <label htmlFor='author'>
-          <input
-            type='text'
-            id='author'
-            name='author'
-            value={newBook.author}
-            onChange={handleChange}
-            className='BookInput'
-            placeholder='Author'
-            required
-          />
-        </label>
+        <InputField
+          id='title'
+          name='title'
+          value={newBook.title}
+          onChange={handleChange}
+          placeholder='Title'
+          required
+        />
+        <InputField
+          id='image'
+          name='image'
+          value={newBook.image}
+          onChange={handleChange}
+          placeholder='Image URL'
+        />
+        <InputField
+          id='author'
+          name='author'
+          value={newBook.author}
+          onChange={handleChange}
+          placeholder='Author'
+          required
+        />
       </div>
       <Button title='Add book' buttonType='submit' />
       <Button title='Delete all' clickFunction={deleteAll} />

@@ -35,4 +35,8 @@
       width: 100%;
     }
   }
+
+  li:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+  }
 }
