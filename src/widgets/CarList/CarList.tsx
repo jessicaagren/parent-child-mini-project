@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './CarList.scss';
 import CarItem, { Car } from './CarItem/CarItem';
 import Button from '../../components/Button/Button';
+import GenericDiv from '../../components/GenericDiv/GenericDiv';
 
 // const carsList = [
 //   'Volvo',
@@ -37,7 +38,7 @@ function CarList() {
 
   return (
     <>
-      <div className='CarListDiv ListDiv'>
+      <GenericDiv className='CarList'>
         <h2>Cars</h2>
         <ul className='CarList List'>
           {cars.map((car, index) => (
@@ -53,7 +54,7 @@ function CarList() {
           ))}
         </ul>
         <Button title='Reset' clickFunction={reset} />
-      </div>
+      </GenericDiv>
     </>
   );
 }

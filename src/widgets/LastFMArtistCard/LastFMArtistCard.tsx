@@ -5,6 +5,7 @@ import { LastFMArtistType } from '../../types/LastFMArtistType/LastFMArtistType'
 import { LastFMAlbumsType } from '../../types/LastFMAlbumsType/LastFMAlbumsType';
 import InputField from '../../components/InputField/InputField';
 import Button from '../../components/Button/Button';
+import GenericDiv from '../../components/GenericDiv/GenericDiv';
 
 export function LastFMArtistCard() {
   const [inputValue, setInputValue] = useState('');
@@ -39,7 +40,7 @@ export function LastFMArtistCard() {
   };
 
   return (
-    <div className='LastFMArtistCard'>
+    <GenericDiv className='LastFMArtistCard'>
       <h2>LastFM API with useFetch</h2>
 
       <div className='search-container'>
@@ -71,6 +72,6 @@ export function LastFMArtistCard() {
           )}
         </>
       )}
-    </div>
+    </GenericDiv>
   );
 }

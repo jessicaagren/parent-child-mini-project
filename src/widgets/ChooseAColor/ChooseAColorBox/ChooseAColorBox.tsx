@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './ChooseAColorBox.scss';
 import Button from '../../../components/Button/Button';
+import GenericDiv from '../../../components/GenericDiv/GenericDiv';
 
 type ColorBox = {
   id: number;
@@ -23,7 +24,7 @@ function ChooseAColorBox() {
   };
 
   return (
-    <div className='ChooseAColorBox'>
+    <GenericDiv className='ChooseAColorBox'>
       <h2>Add color</h2>
 
       <Button title='Add color box' clickFunction={addColorBox} />
@@ -44,7 +45,7 @@ function ChooseAColorBox() {
           </div>
         ))}
       </div>
-    </div>
+    </GenericDiv>
   );
 }
 

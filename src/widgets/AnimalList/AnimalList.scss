@@ -1,20 +1,3 @@
-.AnimalListDiv {
-  background: linear-gradient(#9198e5, #e66465);
-  min-width: 20%;
-  max-width: 30%;
-  border: antiquewhite 1px solid;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: fit-content;
-
-  h2 {
-    width: 100%;
-  }
-}
-
 .AnimalList {
   list-style: none;
   display: flex;

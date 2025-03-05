@@ -3,6 +3,7 @@ import './AnimalList.scss';
 import AnimalItem from './AnimalItem/AnimalItem';
 import Button from '../../components/Button/Button';
 import InputField from '../../components/InputField/InputField';
+import GenericDiv from '../../components/GenericDiv/GenericDiv';
 
 const animalsList = ['Lion', 'Tiger', 'Bear', 'Horse'];
 
@@ -24,7 +25,7 @@ function AnimalList() {
   };
 
   return (
-    <div className='AnimalListDiv ListDiv'>
+    <GenericDiv className='AnimalList'>
       <h2>Animals</h2>
       <section className='AnimalInput'>
         <InputField
@@ -45,7 +46,7 @@ function AnimalList() {
           <AnimalItem key={index} animal={animal} />
         ))}
       </ul>
-    </div>
+    </GenericDiv>
   );
 }
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './BookBox.scss';
 import BookForm from './BookFom/BookForm';
 import BookCard from './BookCard/BookCard';
+import GenericDiv from '../../components/GenericDiv/GenericDiv';
 
 type Books = { title: string; image: string; author: string };
 
@@ -44,7 +45,7 @@ function BookBox() {
   };
 
   return (
-    <div className='BookBox'>
+    <GenericDiv className='BookBox'>
       <h2>Add books</h2>
       <BookForm
         newBook={newBook}
@@ -63,7 +64,7 @@ function BookBox() {
           <p>Nothing to see here</p>
         )}
       </ul>
-    </div>
+    </GenericDiv>
   );
 }
 

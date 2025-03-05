@@ -3,6 +3,7 @@ import './ASOIAFCharacterCard.scss';
 import AsoiafCharacterType from '../../types/ASOIAFCharacterType/ASOIAFCharacterType';
 import useFetch from '../../hooks/useFetch';
 import Button from '../../components/Button/Button';
+import GenericDiv from '../../components/GenericDiv/GenericDiv';
 
 // Component using the useFetch Hook
 export function DisplayASOIAFCharacterCard() {
@@ -23,7 +24,7 @@ export function DisplayASOIAFCharacterCard() {
 
   return (
     <>
-      <div className='ASOIAFCharacterCard'>
+      <GenericDiv className='ASOIAFCharacterCard'>
         <h2>ASOIAF API with useFetch</h2>
         {loading ? (
           <p>Loading...</p>
@@ -37,7 +38,7 @@ export function DisplayASOIAFCharacterCard() {
           </>
         )}
         <Button title='Randomise' clickFunction={getNewCharacter} />
-      </div>
+      </GenericDiv>
     </>
   );
 }
@@ -81,7 +82,7 @@ export function ASOIAFCharacterCard() {
 
   return (
     <>
-      <div className='ASOIAFCharacterCard'>
+      <GenericDiv className='ASOIAFCharacterCard'>
         <h2>ASOIAF API</h2>
         {loading ? (
           <p>Loading...</p>
@@ -93,7 +94,7 @@ export function ASOIAFCharacterCard() {
           </>
         )}
         <Button title='Randomise' clickFunction={getNewCharacter} />
-      </div>
+      </GenericDiv>
     </>
   );
 }
