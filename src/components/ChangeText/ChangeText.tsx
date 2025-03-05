@@ -20,7 +20,7 @@ function ChangeText() {
 
   return (
     <GenericDiv className='ChangeText'>
-      <h2>Change Text</h2>
+      <h2>Change Text with useRef</h2>
       <input
         ref={inputRef}
         value={inputValue}
