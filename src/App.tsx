@@ -1,4 +1,5 @@
 import './App.scss';
+import ChangeText from './components/ChangeText/ChangeText';
 import AnimalList from './widgets/AnimalList/AnimalList';
 import {
   ASOIAFCharacterCard,
@@ -22,6 +23,7 @@ function App() {
       <ASOIAFCharacterCard />
       <DisplayASOIAFCharacterCard />
       <LastFMArtistCard />
+      <ChangeText />
     </>
   );
 }
